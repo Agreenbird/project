@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="us">
+
+<head>
+	<meta charset="utf-8">
+	<title>知问</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery-validate.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/module.min.js"></script>
+	<script src="js/uploader.min.js"></script>
+	<script src="js/hotkeys.min.js"></script>
+	<script src="js/simditor.js"></script>
+	<script src="js/index.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="https://static.zhihu.com/static/favicon.ico">
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/simditor.css">
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<div class="header_main">
+			<h1>知问</h1>
+			<div class="header_search">
+				<input type="text" name="search" class="search">
+			</div>
+			<div class="header_button">
+				<button id="search_button">查询</button><button id="question_button">提问</button>
+			</div>
+			<div class="header_member">
+				<a href="###" id="reg_a">注册</a> |
+				<a href="###" id="login_a">登录</a>
+			</div>
+		</div>
+	</div>
+	<form id="reg" title="会员注册">
+		<ol class="reg_error"></ol>
+		<p>
+			<label for="user">账号:</label>
+			<input type="text" name="user" class="text" id="user">
+			<span class="star">*</span>
+		</p>
+		<p>
+			<label for="pass">密码:</label>
+			<input type="text" name="password" class="text" id="pass">
+			<span class="star">*</span>
+		</p>
+		<p>
+			<label for="email">邮箱:</label>
+			<input type="text" name="email" class="text" id="email">
+			<span class="star">*</span>
+		</p>
+		<p>
+			<label>性别:</label>
+			<input type="radio" name="sex" value="male" id="male" checked="checked">
+			<label for="male">男</label>
+			</input>
+			<input type="radio" name="sex" value="female" id="female">
+			<label for="female">女</label>
+			</input>
+
+		</p>
+		<p>
+			<label for="date">生日:</label>
+			<input type="text" name="date" readonly="readonly" class="text" id="date">
+			<span class="star">*</span>
+		</p>
+	</form>
+	<form id="login" title="会员登录">
+		<ol class="login_error"></ol>
+		<p>
+			<label for="user">账号:</label>
+			<input type="text" name="user" class="text" id="login_user">
+			<span class="star">*</span>
+		</p>
+		<p>
+			<label for="pass">密码:</label>
+			<input type="text" name="password" class="text" id="login_pass">
+			<span class="star">*</span>
+		</p>
+	</form>
+
+	<div id="loading">数据加载中...</div>
+	<div id="main">
+		<div class="main_left">
+			<div id="tabs">
+				<ul>
+					<li>
+						<a href="#tab1">tab1</a>
+					</li>
+					<li>
+						<a href="#tab2">tab2</a>
+					</li>
+					<li>
+						<a href="#tab3">tab3</a>
+					</li>
+				</ul>
+				<div id="tab1">tab1-content</div>
+				<div id="tab2">tab2-content</div>
+				<div id="tab3">tab3-content</div>
+			</div>
+		</div>
+		<div class="main_right">
+			<div id="accordion">
+				<h1>菜单1</h1>
+				<div>内容1</div>
+				<h1>菜单2</h1>
+				<div>内容2</div>
+				<h1>菜单3</h1>
+				<div>内容3</div>
+			</div>
+		</div>
+	</div>
+	<form action="123.html" method="POST" title="提问" id="question">
+		<p>
+			<label for="user">问题名称：</label>
+			<input type="text" name="title" class="text" style="width:280px" id="title">
+			<span class="star">*</span>
+		</p>
+		<p>
+			<textarea name="content" id="question_content" cols="36" rows="15" class="uEditorCustom">请填写问题描述！</textarea>
+		</p>
+	</form>
+	<div id="error">请登录后操作....</div>
+</body>
+
+</html>
